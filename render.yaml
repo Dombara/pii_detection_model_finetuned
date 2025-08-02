@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: pii-detection-api
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python pii_model_backend.py
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.9
